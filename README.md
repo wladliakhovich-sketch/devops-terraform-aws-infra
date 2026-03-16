@@ -1,15 +1,35 @@
 # Terraform AWS Infrastructure
 
-DevOps project that creates AWS infrastructure using Terraform.
+This project provisions AWS infrastructure using Terraform.
 
-Architecture:
+## Architecture
 
-Laptop → Bastion Host → Private EC2 → RDS MySQL
-
-Components:
 - VPC
 - Public subnet
-- Private subnet
+- Private subnets
 - Bastion host
-- Private EC2
-- RDS database
+- Private EC2 instance
+- RDS MySQL database
+
+## Features
+
+- Terraform modules
+- Remote state in S3
+- State locking via DynamoDB
+- Secrets stored in AWS SSM Parameter Store
+
+## Infrastructure diagram
+
+Internet
+│  
+Internet Gateway  
+│  
+Public Subnet  
+│  
+Bastion EC2  
+│  
+Private Subnet  
+│  
+Private EC2  
+│  
+RDS MySQL
